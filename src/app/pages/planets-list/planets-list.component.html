@@ -1,0 +1,40 @@
+<div class="planets-container" [@slideInFromBottom]>
+  <h1 class="planets-container-h1">Lista de Planetas do Sistema Solar</h1>
+  <p class="planets-description">
+    Abaixo você encontrará uma lista de planetas que contém no sistema solar. Plutão, que é um <br>
+    planeta anão, não é considerado um planeta do sistema solar, no entanto ele não será incluído <br>
+    na lista! Clique na foto para abrir a descrição de cada planeta.
+  </p>
+  <div class="planets">
+    <div class="card-container">
+      <div class="card" *ngFor="let planet of planets">
+        <a class="card-link" routerLink="/planetas/detalhes/{{ planet.id }}">
+          <img class="planets-container-img" src="{{ planet.image }}" alt="{{ planet.name }}" />
+        </a>
+        <h4 class="planets-container-h4">{{ planet.name}}</h4>
+        <p class="planets-description">Rotação: {{ planet.rotation }}</p>
+        <p class="planets-description">Translação: {{ planet.translations }}</p>
+        <p class="planets-description">Temperatura: {{ planet.degree }}º</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>
+      Ordem dos planetas do Sistema Solar:
+  </h2>
+  <p class="planets-description">
+      Os oito planetas existentes no Sistema Solar são classificados segundo as suas posições em relação ao Sol. <br>
+      A ordem dos planetas é: <span>Sol → Mercúrio → Vênus → Terra → Marte → Júpiter → Saturno → Urano → Netuno</span>
+  </p>
+  <p class="planets-description">
+      <span>Eles podem ser classificados em:</span> Planetas telúricos, terrestres ou rochosos: são os quatro <br>
+      planetas mais próximos do Sol: Mercúrio, Vênus, Terra e Marte. São caracterizados por serem <br>
+      constituídos de rochas, ferro e metais pesados e por possuírem maior densidade, visto que os <br>
+      materiais densos possuem tendência a estarem mais próximos ao Sol. <br> <br>
+      <span>Planetas jovianos, gigantes ou gasosos:</span> são os quatro planetas mais distantes do Sol: Júpiter, <br>
+      Saturno, Urano e Netuno. São maiores que os planetas telúricos em termos de dimensão. São caracterizados <br>
+      por serem formados por gases como hélio e hidrogênio. São menos densos, por isso mais afastados do Sol. <br>
+      Há evidências de que esses planetas possuem um núcleo rochoso, contudo, não apresentam uma superfície <br>
+      definida.Todos apresentam vários satélites naturais e sistemas de anéis.
+  </p>
+</div>

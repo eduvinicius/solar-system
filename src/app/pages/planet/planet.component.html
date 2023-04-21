@@ -1,0 +1,10 @@
+<div class="planet-container" [@slideInFromTop]>
+  <div class="planet" *ngFor="let planet of planetsFiltered">
+    <h1 class="planet-h1">{{ planet.name }}</h1>
+    <img class="planet-img" src="{{ planet.image }}" alt="{{ planet.name }}" />
+    <p class="planet-description"><span>Descrição: </span> {{ planet.description }}</p>
+    <p class="planet-description"><span>Translação: </span>{{ planet.translations }}</p>
+    <p class="planet-description"><span>Rotação: </span>{{ planet.rotation }}</p>
+    <p class="planet-description"><span>Temperatura: </span>{{ planet.degree }}º</p>
+  </div>
+</div>
