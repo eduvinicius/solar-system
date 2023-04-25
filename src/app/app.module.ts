@@ -6,12 +6,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
-import { PlanetsListComponent } from './pages/planets-list/planets-list.component';
-import { AboutComponent } from './pages/about/about.component';
-import { PlanetComponent } from './pages/planet/planet.component';
+import { HeaderComponent } from './modules/components/header/header.component';
+import { FooterComponent } from './modules/components/footer/footer.component';
+import { HomeComponent } from './modules/features/home/home.component';
+import { PlanetsListComponent } from './modules/features/planets-list/planets-list.component';
+import { AboutComponent } from './modules/features/about/about.component';
+import { PlanetComponent } from './modules/features/planet/planet.component';
+import { PageNotFoundComponent } from './modules/features/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PlanetComponent } from './pages/planet/planet.component';
     HomeComponent,
     PlanetsListComponent,
     AboutComponent,
-    PlanetComponent
+    PlanetComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

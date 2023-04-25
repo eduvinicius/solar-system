@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { PlanetsListComponent } from './pages/planets-list/planets-list.component';
-import { AboutComponent } from './pages/about/about.component';
-import { PlanetComponent } from './pages/planet/planet.component';
+import { HomeComponent } from './modules/features/home/home.component';
+import { PlanetsListComponent } from './modules/features/planets-list/planets-list.component';
+import { AboutComponent } from './modules/features/about/about.component';
+import { PlanetComponent } from './modules/features/planet/planet.component';
+import { PageNotFoundComponent } from './modules/features/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'planetas', children: [
-    {path: 'lista-planetas', component: PlanetsListComponent},
-    {path: 'detalhes/:id', component: PlanetComponent}
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'planetas', children: [
+    { path: '', redirectTo: 'lista', pathMatch: 'full' },
+    { path: 'lista', component: PlanetsListComponent },
+    { path: ':id', component: PlanetComponent },
+    { path: '**', component: PageNotFoundComponent }
   ]},
-  {path: 'sobre', component: AboutComponent},
+  { path: 'sobre', component: AboutComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

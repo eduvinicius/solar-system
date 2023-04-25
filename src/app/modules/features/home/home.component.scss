@@ -4,28 +4,29 @@
   justify-content: center;
   align-items: center;
 
-  .home-h1 {
+  &-title {
     margin: .5em 0;
   }
 
-  .home-h2 {
+  &-subtitle {
     margin: .5em 0;
   }
 
-  .home-description {
+  &-description {
     margin: .5em 0;
   }
-  .home-img {
+
+  &-img {
     width: 700px;
     height: 400px;
     margin: 1em 0;
     border-radius: 5px;
   }
 
-  .home-ul {
+  &-list {
     list-style: circle;
 
-    li {
+    .list {
       margin: 1em 0;
     }
   }
@@ -34,23 +35,23 @@
 @media (max-width: 700px) {
   .home {
 
-    .home-description {
+    &-description {
       margin: .5em .8em;
     }
 
-    .home-img {
+    &-img {
       width: 330px;
       height: 200px;
     }
 
-    .home-h2 {
+    &-subtitle {
       margin: .5em .8em;
     }
 
-    .home-ul {
+    &-list {
       list-style: none;
 
-      li {
+      .list {
         margin: 1em 1em;
       }
     }

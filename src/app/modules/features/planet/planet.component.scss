@@ -1,20 +1,21 @@
+@use '../../../../mixins.scss';
+@use '../../../../variables.scss';
+
 .planet {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include mixins.center;
   flex-direction: column;
 
-  .planet-h1 {
+  &-title {
     margin: 1em 0;
-    color: #DAA520;
+    color: variables.$color-golden;
   }
 
-  .planet-img {
+  &-img {
     margin-bottom: 1em;
     border-radius: 10px;
   }
 
-  .planet-description {
+  &-description {
     margin: .5em 2em;
   }
 }

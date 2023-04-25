@@ -1,19 +1,19 @@
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@use '../../../../mixins.scss';
 
-  .about-h1 {
+.about {
+  @include mixins.center;
+  flex-direction: column;
+
+  &-title {
     margin: 1em 0;
   }
 
-  .about-img {
+  &-img {
     margin-bottom: 2em;
     border-radius: 50%;
   }
 
-  .about-description {
+  &-description {
     margin-bottom: 2em;
   }
 }
@@ -22,14 +22,14 @@
   .about {
     text-align: center;
 
-    .about-img {
+    &-img {
       width: 330px;
       height: 350px;
       margin-bottom: 3em;
       border-radius: 50%;
     }
 
-    .about-description {
+    &-description {
       font-size: 20px;
       margin: 1em 3em;
     }

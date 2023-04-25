@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@use './variables.scss';
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 * {
   padding: 0;
@@ -20,12 +22,12 @@ a {
 }
 
 a:hover {
-  color: #DAA520;
+  color: variables.$color-golden;;
 }
 
 span {
   font-weight: bold;
-  color: #DAA520;
+  color: variables.$color-golden;;
 }
 
 p {

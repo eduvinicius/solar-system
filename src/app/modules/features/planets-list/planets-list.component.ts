@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { planets } from 'mockData';
+import { planets } from 'planet.mock';
 
 import { slideInFromBottom } from 'src/app/animations/animations';
 

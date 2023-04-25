@@ -1,23 +1,24 @@
-.planets-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@use '../../../../mixins.scss';
+@use '../../../../variables.scss';
 
-  .planets-container-h1 {
+.planets {
+  @include mixins.center;
+  flex-direction: column;
+
+  &-title {
     margin-top: 2em;
     margin-bottom: 1em;
   }
 
-  .planets-description {
+  &-description {
     margin: 1em 0;
   }
 
-  .planets {
+  &-cards {
     display: flex;
     gap: 10em;
     margin-bottom: 2em;
-    background-color: #1c1c1c;
+    background-color: variables.$bg-color-gray;
     width: 90%;
     height: 700px;
     border-radius: 10px;
@@ -36,7 +37,7 @@
         border: 2px solid #fff;
         border-radius: 8px;
         padding: .8rem .9rem;
-        background: #4B0082;
+        background: variables.$bg-color-purple;
         height: 300px;
         margin: .5em;
         transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
@@ -52,11 +53,11 @@
             opacity: .5;
           }
         }
-        .planets-container-img {
+        .planets-img {
           width: 90%;
         }
 
-        .planets-container-h4 {
+        .planets-subtitle {
           margin-top: 1em;
           color: #DAA520;
         }
@@ -72,19 +73,19 @@
 
 @media (max-width: 700px) {
 
-  .planets-container {
+  .planets {
     text-align: center;
 
-    .planets-container-h1 {
+    &-title {
       margin: .5em;
       text-align: center;
     }
 
-    .planets-description {
+    &-description {
       margin: 1em;
     }
 
-    .planets {
+    &-cards {
       height: 2800px;
       .card-container {
 

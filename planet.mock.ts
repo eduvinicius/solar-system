@@ -1,4 +1,6 @@
-export const planets = [
+import { IPlanet } from "src/planet.interface"
+
+export const planets: IPlanet[] = [
       {
         id: 1,
         name: "Mercúrio",

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { planets } from 'mockData';
-import { Planet } from 'src/planetInterface';
+import { planets } from 'planet.mock';
+import { IPlanet } from 'src/planet.interface';
 
 import { slideInFromTop } from 'src/app/animations/animations';
 
@@ -18,8 +18,8 @@ export class PlanetComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  planets: Planet[] = planets;
-  planetsFiltered: Planet[] = [];
+  planets: IPlanet[] = planets;
+  planetsFiltered: IPlanet[] = [];
 
   ngOnInit(): void {
     const id: number = Number(this.route.snapshot.paramMap.get("id"));
@@ -28,3 +28,4 @@ export class PlanetComponent implements OnInit {
   }
 
 }
+

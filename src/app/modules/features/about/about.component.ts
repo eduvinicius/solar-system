@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { slide } from '../../animations/animations'
+import { slide } from '../../../animations/animations'
 
 @Component({
   selector: 'app-about',

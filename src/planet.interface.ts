@@ -1,4 +1,4 @@
-export interface Planet {
+export interface IPlanet {
   id: number,
   name: string,
   description: string,

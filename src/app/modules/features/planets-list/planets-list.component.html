@@ -1,17 +1,17 @@
-<div class="planets-container" [@slideInFromBottom]>
-  <h1 class="planets-container-h1">Lista de Planetas do Sistema Solar</h1>
+<div class="planets" [@slideInFromBottom]>
+  <h1 class="planets-title">Lista de Planetas do Sistema Solar</h1>
   <p class="planets-description">
     Abaixo você encontrará uma lista de planetas que contém no sistema solar. Plutão, que é um <br>
     planeta anão, não é considerado um planeta do sistema solar, no entanto ele não será incluído <br>
     na lista! Clique na foto para abrir a descrição de cada planeta.
   </p>
-  <div class="planets">
+  <div class="planets-cards">
     <div class="card-container">
       <div class="card" *ngFor="let planet of planets">
-        <a class="card-link" routerLink="/planetas/detalhes/{{ planet.id }}">
-          <img class="planets-container-img" src="{{ planet.image }}" alt="{{ planet.name }}" />
+        <a class="card-link" routerLink="/planetas/{{ planet.id }}">
+          <img class="planets-img" src="{{ planet.image }}" alt="{{ planet.name }}" />
         </a>
-        <h4 class="planets-container-h4">{{ planet.name}}</h4>
+        <h4 class="planets-subtitle">{{ planet.name}}</h4>
         <p class="planets-description">Rotação: {{ planet.rotation }}</p>
         <p class="planets-description">Translação: {{ planet.translations }}</p>
         <p class="planets-description">Temperatura: {{ planet.degree }}º</p>
